@@ -10,9 +10,9 @@ Download the dataset from [[Google Drive]](https://drive.google.com/drive/folder
 ## Requirements
 The code has been tested under Python 3.8.13. Check `requirements.txt` for more package details.
 
+## Experiments
 
-
-## Long-term Forecasting
+### Long-term Forecasting
 For example, train a DLinear with CCM on ETTm2 dataset for forecasting length 96:
 ```python main.py --model DLinear  --data ETTm2 --out_len 96 --in_len 336 --learning_rate 0.001 --batch_size 32 --individual "c"```
 
@@ -20,12 +20,12 @@ For example, train a DLinear with CCM on ETTm2 dataset for forecasting length 96
 For example, train a DLinear with CCM on ETTh1 and test the zero-shot performance on ETTh2:
 ``` python main.py --zero_shot_test True --data ETTh1 --test_data ETTh2 --model DLinear --out_len 96 --individual "c" ```
 
-## M4 Forecasting
+### M4 Forecasting
 In M4 dataset, the input length and forecasting length are specified in the `datasets/data_loader.py`. To train a DLinear with CCM:
 ```python main_m4.py --model DLinear --data m4 --batch_size 32 --individual "c"```
 
-## Stock Price Forecasting
-To train a DLinear with CCM on Stock dataset with forecasting length 7
+### Stock Price Forecasting
+To train a DLinear with CCM on Stock dataset with forecasting length 7:
 ```python main_stock.py --model DLinear --data stock  --out_len 7 --in_len 28 --batch_size 128 --individual "c"```
 
 **Note**: Specify `--individual "i"` to disable CCM on base Time Series models.
@@ -44,7 +44,8 @@ If you find this repo useful, please cite our paper. [TBC]
 ```
 
 ## Contact
-If you have any questions regarding the paper and code, please feel free to contact the first author: Jialin Chen (jialin.chen@yale.edu).
+If you have any questions regarding the paper and code, please feel free to contact the first author: 
+- Jialin Chen (jialin.chen@yale.edu).
 
 ## Acknowledgement
 This research was supported in part by the **National Science Foundation (NSF)** and **AWS Research Awards**. We also thank to the following repos for reference:
