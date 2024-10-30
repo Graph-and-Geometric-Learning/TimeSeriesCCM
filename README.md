@@ -1,6 +1,6 @@
 # From Similarity to Superiority: Channel Clustering for Time Series Forecasting [NeurIPS 2024]
-This is the PyTorch implementation of "From Similarity to Superiority: Channel Clustering for Time Series Forecasting"
-We propose **CCM**, a channel strategy that effectively balances individual channel treatment for improved forecasting perforamcne without overlooking essential interactions between time series channels. We test the effectiveness of CCM based on four popular time series models: TSMixer, DLinear, PatchTST and TimesNet.
+This is the PyTorch implementation of "From Similarity to Superiority: Channel Clustering for Time Series Forecasting".
+We propose **CCM**, a channel strategy that effectively balances individual channel treatment for improved forecasting performance without overlooking essential interactions between time series channels. We test the effectiveness of CCM based on four popular time series models: TSMixer, DLinear, PatchTST and TimesNet.
 
 ## Dataset
 
@@ -21,7 +21,7 @@ For example, train a DLinear with CCM on ETTh1 and test the zero-shot performanc
 ``` python main.py --zero_shot_test True --data ETTh1 --test_data ETTh2 --model DLinear --out_len 96 --individual "c" ```
 
 ### M4 Forecasting
-In M4 dataset, the input length and forecasting length are specified in the `datasets/data_loader.py`. To train a DLinear with CCM:
+In the M4 dataset, the input length and forecasting length are specified in the `datasets/data_loader.py`. To train a DLinear with CCM:
 ```python main_m4.py --model DLinear --data m4 --batch_size 32 --individual "c"```
 
 ### Stock Price Forecasting
